@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.studentList{
+    width:350px;
+    margin:100px auto;
+    border:1px solid red;
+}
+.studentList .student span.complete{
+    text-decoration: line-through;
+}
+.studentList .student span{
+    width:85%;
+    display: inline-block;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.studentList input[type="text"]{
+    width:100%;
+    padding:10px 20px;
+    margin:20px 0;
+}
+.studentList .student{
+    padding:0 5px;
+}
+.studentList .editForm input{
+    border:none;
+}
+.studentList .footer{
+    display: flex;
+    justify-content: space-around;
+}
+.studentList .footer button{
+    border:1px solid green;
+    background: #fff;
+    color:#333;
+    padding:2px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.studentList .editForm input{
+    border:1px solid green;
+}
