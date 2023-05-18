@@ -1,8 +1,11 @@
 
 import "./Header.css"
+import { useContext } from "react"
 import { Link } from "react-router-dom"
-
+import { AppContext } from "../../AppContext"
 const Header = () => {
+    const {show}=useContext(AppContext)
+    console.log(show)
     return (
         <div className="header">
             <div className="headerLeft">

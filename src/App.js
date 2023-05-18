@@ -10,11 +10,13 @@ import Prices from "./pages/Prices"
 import NotFound from "./pages/NotFound"
 import Invoice from "./pages/Invoice"
 import Invoices from "./pages/Invoices"
+import { AppProvider } from './AppContext'
 export default function App(){
 
     return (
 
         <div>
+            <AppProvider>
             {/* <StudentList /> */}
              {/* <Weather /> */}
              <ul>
@@ -43,6 +45,7 @@ export default function App(){
                      </Route>
                 </Route>
              </Routes>
+             </AppProvider>
         </div>
     )
 }

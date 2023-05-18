@@ -1,8 +1,12 @@
-import React, {useEffect, useState} from "react"
+import React, {useEffect, useState,useContext} from "react"
 import "./MovieDetail.css"
 import { useParams } from "react-router-dom"
+import { AppContext } from "../../AppContext"
 
-const MovieDetail = () => {
+
+const MovieDetail = ({addToCart}) => {
+    const {show}=useContext(AppContext)
+    console.log(show)
     const [currentMovieDetail, setMovie] = useState()
     const { id } = useParams()
 
@@ -12,6 +16,7 @@ const MovieDetail = () => {
     }, [])
 
     const getData = () => {
+                ttps://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US`)
         .then(res => res.json())
         .then(data => setMovie(data))
@@ -39,6 +44,7 @@ const MovieDetail = () => {
                         <div className="movie__runtime">{currentMovieDetail ? currentMovieDetail.runtime + " mins" : ""}</div>
                         <div className="movie__releaseDate">{currentMovieDetail ? "Release date: " + currentMovieDetail.release_date : ""}</div>
                         <div className="movie__genres">
+                            
                             {
                                 currentMovieDetail && currentMovieDetail.genres
                                 ? 
