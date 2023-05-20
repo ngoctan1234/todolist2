@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { AppContext } from "../../AppContext"
 const Header = () => {
     const {show}=useContext(AppContext)
-    console.log(show)
+    
     return (
         <div className="header">
             <div className="headerLeft">
@@ -13,6 +13,7 @@ const Header = () => {
                 <Link to="/movies/popular" style={{textDecoration: "none"}}><span>Popular</span></Link>
                 <Link to="/movies/top_rated" style={{textDecoration: "none"}}><span>Top Rated</span></Link>
                 <Link to="/movies/upcoming" style={{textDecoration: "none"}}><span>Upcoming</span></Link>
+                <Link to="/cart" style={{textDecoration: "none"}}><span>Cart</span></Link>
             </div>
         </div>
     )

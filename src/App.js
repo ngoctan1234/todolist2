@@ -5,7 +5,6 @@ import  './style.css'
 import Weather from "./components2/Weather"
 import { Routes,Route,Link } from "react-router-dom"
 import Home from "./pages/Home"
-import Products from "./pages/Products"
 import Prices from "./pages/Prices"
 import NotFound from "./pages/NotFound"
 import Invoice from "./pages/Invoice"
@@ -36,7 +35,7 @@ export default function App(){
              <Routes>
              <Route index element={<Home/>} />
                 {/* <Route path="/" element={<Home/>} /> */}
-                <Route path="/products" element={<Products/>} />
+                {/* <Route path="/products" element={<Products/>} /> */}
                 <Route path="/prices" element={<Prices/>} />
                 <Route path="*" element={<NotFound/>} />
                 <Route path="/invoice" element={<Invoices/>} >

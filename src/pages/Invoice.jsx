@@ -23,5 +23,9 @@ export default function Invoice(){
         getData()
     },[param])
     
-    return <h2>{data&& data.name}</h2>
+    return (
+        <div className="product">
+
+        </div>
+    )
 }
