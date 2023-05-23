@@ -1,9 +1,9 @@
-import  {useEffect, useState} from "react"
+import  {useEffect, useState,useContext} from "react"
 import "./Card.css"
 import { Link } from "react-router-dom"
-
+import { AppContext } from "../../AppContext"
 const Cards = ({movie}) => {
-
+   
     return <>
     
         

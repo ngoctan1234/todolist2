@@ -28,7 +28,7 @@ export default function Products(){
                    data&& data.map((item,index)=>
                     (
                          <div key={index} className="product">
-                        {item.name},{item.id}
+                        {item.productname},{item.id}
                         <button onClick={()=>addCart(item.id)}>Buy Now</button>
                         </div>
                     )

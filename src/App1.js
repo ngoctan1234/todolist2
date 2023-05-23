@@ -10,8 +10,11 @@ import { AppProvider } from './AppContext'
 import Products from "./pages1/products/Products"
 import './App.css'
 import Cart from "./components2/cart/Cart"
-export default function App1(){
 
+export default function App1(){
+     const arr=[{id:1,name:"1"},{id:2,name:"2"},{id:3,name:"3"}]
+     let kq=arr.findIndex((item)=>item.id=="4")
+     console.log("kq: "+kq)
     return (
 
         <div className="App">
